@@ -39,3 +39,6 @@ getAuth: Firebase 인증 서비스 객체를 반환하는 함수입니다.
 
 위의 README 내용은 PageLogin 컴포넌트와 Firebase 설정 파일의 주요 기능과 구현 세부 사항을 간략하게 요약하여 작성하였습니다.
 필요에 따라 추가적인 정보나 세부 사항을 더 추가할 수 있습니다.
+
+**_test계정_**
+test@gmail.com / 1q2w3e4r!

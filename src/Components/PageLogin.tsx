@@ -35,7 +35,7 @@ const PageLogin: React.FC = () => {
   return (
     <>
       {showSnackbar && (
-        <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 mb-4 px-6 py-2 bg-gray-800 text-white rounded shadow-lg">
+        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 mb-4 px-6 py-2 bg-gray-800 text-white rounded shadow-lg">
           {message}
         </div>
       )}
