@@ -1,46 +1,41 @@
-# Getting Started with Create React App
+### Client service web
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Overview**
+firebase를 활용하여 client front service를 구현합니다.
 
-## Available Scripts
+**demo site**
+https://sprint-debug.github.io/client-ms/
 
-In the project directory, you can run:
+<hr>
 
-### `yarn start`
+**Components**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. PageLogin
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- 이메일 및 비밀번호 입력: 사용자는 이메일과 비밀번호를 입력할 수 있습니다.
+- 로그인 시도: '로그인' 버튼을 클릭하면 입력된 이메일과 비밀번호로 로그인을 시도합니다.
+- 로그인 상태 메시지: 로그인이 성공하면 "로그인 되었습니다."라는 메시지가 표시되며, 실패하면 "로그인이 되지 않았습니다."라는 메시지가 표시됩니다.
 
-### `yarn test`
+**_구현 세부 사항_**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+useState를 사용하여 email, password, message 상태를 관리합니다.
+signInWithEmailAndPassword 함수를 사용하여 Firebase 인증 서비스를 통한 이메일/비밀번호 로그인을 시도합니다.
+로그인 시도 중 발생할 수 있는 오류는 try-catch를 사용하여 처리합니다.
 
-### `yarn build`
+2. Firebase설정
+   Firebase와의 통신 및 인증을 위한 기본 설정입니다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- FirebaseConfig: Firebase 프로젝트의 설정 정보를 담고 있습니다.
+- firebaseApp 초기화: Firebase 앱을 초기화하며, 이를 통해 Firebase 서비스에 접근할 수 있습니다.
+- 인증 서비스 초기화: Firebase 인증 서비스를 초기화하며, 이를 통해 이메일/비밀번호 인증, 소셜 로그인 등의 인증 방법을 사용할 수 있습니다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**_구현 세부 사항_**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+firebaseConfig: Firebase 프로젝트 설정을 담은 객체입니다. 이 정보는 Firebase 콘솔에서 가져올 수 있습니다.
+initializeApp: Firebase 앱을 초기화하는 함수입니다. firebaseConfig를 인수로 전달합니다.
+getAuth: Firebase 인증 서비스 객체를 반환하는 함수입니다.
 
-### `yarn eject`
+<hr>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+위의 README 내용은 PageLogin 컴포넌트와 Firebase 설정 파일의 주요 기능과 구현 세부 사항을 간략하게 요약하여 작성하였습니다.
+필요에 따라 추가적인 정보나 세부 사항을 더 추가할 수 있습니다.
